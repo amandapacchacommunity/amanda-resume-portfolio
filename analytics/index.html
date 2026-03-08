@@ -1,66 +1,421 @@
-<section class="intro">
-
-<h1>Analytics & Risk Visualization</h1>
-
-<p>
-Interactive dashboards and mock datasets demon<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Analytics</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Analytics | Amanda Paccha</title>
+
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+
+<style>
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+background:#f4f6f9;
+color:#222;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1050px;
+margin:auto;
+}
+
+header{
+background:#fff;
+border-bottom:1px solid #e2e2e2;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+flex-wrap:wrap;
+}
+
+.brand{
+font-weight:700;
+font-size:18px;
+}
+
+nav a{
+margin-left:18px;
+text-decoration:none;
+color:#555;
+font-weight:600;
+}
+
+nav a:hover{
+color:#3347d6;
+}
+
+.section{
+padding:42px 0;
+}
+
+.hero{
+padding:56px 0 24px 0;
+}
+
+h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+h2{
+font-size:26px;
+margin-bottom:16px;
+}
+
+h3{
+margin-top:0;
+}
+
+.card{
+background:#fff;
+padding:26px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.timeline{
+display:grid;
+gap:18px;
+}
+
+.job{
+background:#fff;
+padding:26px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+.meta{
+color:#666;
+font-size:14px;
+margin-bottom:14px;
+font-weight:600;
+}
+
+.job ul{
+margin-left:20px;
+}
+
+.login-screen{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#f4f6f9;
+}
+
+.login-box{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+text-align:center;
+width:320px;
+}
+
+.login-box input{
+width:100%;
+padding:10px;
+margin-top:15px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+.login-box button{
+margin-top:15px;
+padding:10px;
+width:100%;
+border:none;
+background:#3347d6;
+color:white;
+font-weight:600;
+border-radius:6px;
+cursor:pointer;
+}
+
+.login-box button:hover{
+background:#2a3dc0;
+}
+
+.login-box a{
+color:#3347d6;
+text-decoration:none;
+font-weight:600;
+}
+
+#error{
+color:red;
+font-size:14px;
+margin-top:10px;
+}
+
+footer{
+padding:40px 0;
+text-align:center;
+color:#777;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<h1>Analytics & Risk Visualization</h1>
+<div id="login" class="login-screen">
+
+<div class="login-box">
+
+<h2>Private Portfolio Access</h2>
+
+<p>This portfolio is shared privately.</p>
+
+<p>To request the passcode please email:</p>
 
 <p>
-Interactive dashboards and mock datasets demonstrating enterprise risk
-analysis, compliance metrics, and operational monitoring.
+<a href="mailto:alpermnyc@gmail.com">alpermnyc@gmail.com</a>
 </p>
 
-<section>
+<input type="password" id="password" placeholder="Enter passcode">
 
-<article>
-<h3>Enterprise Risk Register</h3>
-<p>Interactive risk scoring and mitigation tracking dashboard.</p>
-</article>
+<button onclick="login()">Access Portfolio</button>
 
-<article>
-<h3>Operational Risk Metrics</h3>
-<p>Visualization of institutional risk exposure across functions.</p>
-</article>
+<p id="error"></p>
 
-<article>
-<h3>Compliance Monitoring</h3>
-<p>Sample reporting structures for compliance program oversight.</p>
-</article>
+</div>
+
+</div>
+
+
+<div id="site" style="display:none">
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<div class="brand">Amanda Paccha</div>
+
+<div>
+<a href="../">Home</a>
+<a href="../about/">About</a>
+<a href="../resume/">Resume</a>
+<a href="../investigations/">Investigations</a>
+<a href="../leadership/">Leadership</a>
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="container">
+
+<div class="card">
+
+<h1>Analytics & Reporting</h1>
+
+<p>
+My analytics work focuses on transforming institutional data into reporting that supports governance, compliance oversight, and operational decision-making.
+</p>
+
+<p>
+Across roles in higher education, nonprofit organizations, public administration, and cultural institutions, I have worked with workforce data, risk reporting, and operational datasets to identify trends and improve institutional transparency.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
-<p><a href="../index.html">Back to Home</a></p>
+
+
+<section class="section">
+
+<div class="container">
+
+<h2>Analytical Focus Areas</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Risk & Compliance Reporting</h3>
+
+<p>
+Preparation of institutional reports supporting enterprise risk management, regulatory compliance, and governance review.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Workforce & Compensation Analytics</h3>
+
+<p>
+Analysis of compensation structures, pay equity metrics, benchmarking surveys, and workforce trends supporting HR compliance.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Operational Data Analysis</h3>
+
+<p>
+Validation and analysis of large institutional datasets to improve reporting accuracy and support executive decision-making.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="container">
+
+<h2>Relevant Experience</h2>
+
+<div class="timeline">
+
+<div class="job">
+
+<h3>Data Analyst</h3>
+
+<div class="meta">
+Metropolitan Museum of Art · New York, NY · 2023
+</div>
+
+<ul>
+
+<li>Conducted workforce and compensation analysis supporting HR leadership and financial planning.</li>
+
+<li>Developed reporting tools and dashboards to support executive decision-making.</li>
+
+<li>Validated large datasets to strengthen reporting accuracy and compliance oversight.</li>
+
+<li>Collaborated with HR and finance teams to translate analytical findings into operational recommendations.</li>
+
+</ul>
+
+</div>
+
+
+<div class="job">
+
+<h3>Associate Data Analyst</h3>
+
+<div class="meta">
+City of Chicago · Chicago, IL · 2022
+</div>
+
+<ul>
+
+<li>Analyzed workforce data across multiple city departments to support compensation review and benchmarking.</li>
+
+<li>Developed dashboards and reports supporting compliance initiatives and administrative oversight.</li>
+
+<li>Improved reporting workflows through automation and standardized documentation practices.</li>
+
+</ul>
+
+</div>
+
+
+<div class="job">
+
+<h3>Risk Management Associate</h3>
+
+<div class="meta">
+Pratt Institute · Brooklyn, NY · 2024–2025
+</div>
+
+<ul>
+
+<li>Consolidated compliance and risk data from multiple institutional departments.</li>
+
+<li>Prepared reporting materials supporting enterprise risk management and Clery compliance oversight.</li>
+
+<li>Produced risk summaries and institutional reports for leadership review.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<div class="container">
+
+<p>© 2026 Amanda Paccha</p>
+
+</div>
+
+</footer>
+
+</div>
+
+
+
+<script>
+
+const PASSWORD = "access2026";
+
+function login(){
+
+let input = document.getElementById("password").value;
+
+if(input === PASSWORD){
+
+document.getElementById("login").style.display = "none";
+document.getElementById("site").style.display = "block";
+
+}else{
+
+document.getElementById("error").innerText = "Incorrect passcode";
+
+}
+
+}
+
+</script>
 
 </body>
-</html>strating enterprise risk
-analysis, compliance metrics, and operational monitoring.
-</p>
-
-</section>
-
-<section class="matrix-grid">
-
-<article class="matrix-card">
-<h3>Enterprise Risk Register</h3>
-<p>Interactive risk scoring and mitigation tracking dashboard.</p>
-</article>
-
-<article class="matrix-card">
-<h3>Operational Risk Metrics</h3>
-<p>Visualization of institutional risk exposure across functions.</p>
-</article>
-
-<article class="matrix-card">
-<h3>Compliance Monitoring</h3>
-<p>Sample reporting structures for compliance program oversight.</p>
-</article>
-
-</section>
+</html>
