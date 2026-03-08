@@ -91,7 +91,7 @@ padding:40px;
 border-radius:10px;
 box-shadow:0 6px 18px rgba(0,0,0,0.08);
 text-align:center;
-width:300px;
+width:320px;
 }
 
 .login-box input{
@@ -118,6 +118,12 @@ cursor:pointer;
 background:#2a3dc0;
 }
 
+.login-box a{
+color:#3347d6;
+text-decoration:none;
+font-weight:600;
+}
+
 #error{
 color:red;
 font-size:14px;
@@ -137,17 +143,29 @@ color:#777;
 
 <body>
 
+<!-- LOGIN SCREEN -->
+
 <div id="login" class="login-screen">
 
 <div class="login-box">
 
-<h2>Portfolio Access</h2>
+<h2>Private Portfolio Access</h2>
 
-<p>This portfolio is shared privately.</p>
+<p>
+This portfolio is shared privately.
+</p>
 
-<input type="password" id="password" placeholder="Enter password">
+<p>
+To request a passcode please email:
+</p>
 
-<button onclick="login()">Enter</button>
+<p>
+<a href="mailto:alpermnyc@gmail.com">alpermnyc@gmail.com</a>
+</p>
+
+<input type="password" id="password" placeholder="Enter passcode">
+
+<button onclick="login()">Access Portfolio</button>
 
 <p id="error"></p>
 
@@ -155,6 +173,9 @@ color:#777;
 
 </div>
 
+
+
+<!-- SITE CONTENT -->
 
 <div id="site" style="display:none">
 
@@ -187,7 +208,7 @@ color:#777;
 <h1>Amanda Paccha</h1>
 
 <p>
-Risk and compliance professional with experience supporting enterprise risk management, compliance reporting, investigations documentation, and analytics across higher education, nonprofit, and public sector institutions.
+Risk and compliance professional with experience supporting enterprise risk management, regulatory compliance, investigations documentation, and data analysis across higher education, nonprofit, and public sector institutions.
 </p>
 
 </div>
@@ -207,7 +228,7 @@ Risk and compliance professional with experience supporting enterprise risk mana
 <div class="card">
 <h3>Risk & Compliance</h3>
 <p>
-Enterprise risk registers, compliance monitoring, and policy development aligned with governance frameworks.
+Experience supporting enterprise risk management programs, compliance monitoring, and policy development aligned with governance frameworks.
 </p>
 </div>
 
@@ -221,7 +242,7 @@ Case documentation, misconduct reporting processes, and coordination with HR, le
 <div class="card">
 <h3>Analytics & Reporting</h3>
 <p>
-Data analysis, dashboards, and executive reporting supporting compliance oversight and operational transparency.
+Data analysis and dashboard reporting supporting executive decision-making and institutional transparency.
 </p>
 </div>
 
@@ -249,7 +270,7 @@ Data analysis, dashboards, and executive reporting supporting compliance oversig
 
 <script>
 
-const PASSWORD = "portfolio2026";
+const PASSWORD = "access2026";
 
 function login(){
 
@@ -262,7 +283,7 @@ document.getElementById("site").style.display = "block";
 
 }else{
 
-document.getElementById("error").innerText = "Incorrect password";
+document.getElementById("error").innerText = "Incorrect passcode";
 
 }
 
@@ -271,5 +292,4 @@ document.getElementById("error").innerText = "Incorrect password";
 </script>
 
 </body>
-
 </html>
