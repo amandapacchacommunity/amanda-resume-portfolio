@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume | Amanda Paccha</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="referrer" content="no-referrer" />
+
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:0;
+      background:#f4f6f9;
+      color:#222;
+      line-height:1.6;
+    }
+
+    .container{
+      width:90%;
+      max-width:1050px;
+      margin:auto;
+    }
+
+    header{
+      background:#fff;
+      border-bottom:1px solid #e2e2e2;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      font-weight:700;
+      font-size:18px;
+    }
+
+    nav a{
+      margin-left:18px;
+      text-decoration:none;
+      color:#555;
+      font-weight:600;
+    }
+
+    nav a:hover{
+      color:#3347d6;
+    }
+
+    .section{
+      padding:42px 0;
+    }
+
+    .hero{
+      padding:56px 0 24px 0;
+    }
+
+    h1{
+      font-size:40px;
+      margin:0 0 10px 0;
+    }
+
+    h2{
+      font-size:26px;
+      margin:0 0 16px 0;
+    }
+
+    h3{
+      margin:0 0 6px 0;
+      font-size:20px;
+    }
+
+    p{
+      margin:0 0 12px 0;
+    }
+
+    .muted{
+      color:#666;
+    }
+
+    .resume-card,
+    .job,
+    .edu-card{
+      background:#fff;
+      padding:26px;
+      border-radius:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .resume-card{
+      margin-bottom:24px;
+    }
+
+    .meta{
+      color:#666;
+      font-size:14px;
+      margin-bottom:14px;
+      font-weight:600;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .skill{
+      background:#eef1ff;
+      color:#22318f;
+      padding:6px 10px;
+      border-radius:6px;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .timeline{
+      display:grid;
+      gap:18px;
+    }
+
+    .job ul{
+      margin:10px 0 0 20px;
+      padding:0;
+    }
+
+    .job li{
+      margin-bottom:8px;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:20px;
+    }
+
+    .login-screen{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#f4f6f9;
+      padding:20px;
+    }
+
+    .login-box{
+      background:#fff;
+      padding:40px;
+      border-radius:10px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      text-align:center;
+      width:320px;
+    }
+
+    .login-box input{
+      width:100%;
+      padding:10px;
+      margin-top:15px;
+      border:1px solid #ccc;
+      border-radius:6px;
+      box-sizing:border-box;
+    }
+
+    .login-box button{
+      margin-top:15px;
+      padding:10px;
+      width:100%;
+      border:none;
+      background:#3347d6;
+      color:white;
+      font-weight:600;
+      border-radius:6px;
+      cursor:pointer;
+    }
+
+    .login-box button:hover{
+      background:#2a3dc0;
+    }
+
+    .login-box a{
+      color:#3347d6;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    #error{
+      color:#c62828;
+      font-size:14px;
+      margin-top:10px;
+    }
+
+    footer{
+      padding:40px 0;
+      text-align:center;
+      color:#777;
+      font-size:14px;
+    }
+
+    @media (max-width: 800px){
+      .two-col{
+        grid-template-columns:1fr;
+      }
+
+      nav a{
+        margin-left:0;
+        margin-right:14px;
+      }
+
+      h1{
+        font-size:34px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="login" class="login-screen">
+    <div class="login-box">
+      <h2>Private Portfolio Access</h2>
+      <p>This portfolio is shared privately.</p>
+      <p>To request the passcode please email:</p>
+      <p><a href="mailto:alpermnyc@gmail.com">alpermnyc@gmail.com</a></p>
+      <input type="password" id="password" placeholder="Enter passcode" />
+      <button onclick="login()">Access Portfolio</button>
+      <p id="error"></p>
+    </div>
+  </div>
+
+  <div id="site" style="display:none;">
+    <header>
+      <div class="container">
+        <nav>
+          <div class="brand">Amanda Paccha</div>
+          <div>
+            <a href="../">Home</a>
+            <a href="../about/">About</a>
+            <a href="../investigations/">Investigations</a>
+            <a href="../analytics/">Analytics</a>
+            <a href="../leadership/">Leadership</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="resume-card">
+          <h1>Amanda Paccha</h1>
+          <p class="muted">
+            Risk and compliance professional with experience in enterprise risk management, regulatory compliance, investigations support, analytics, and institutional reporting across higher education, nonprofit, cultural, and public sector settings.
+          </p>
+          <p class="muted">
+            Focus areas include risk assessment, Clery Act compliance, policy development, case documentation, executive reporting, and cross-functional stakeholder coordination.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="two-col">
+          <div class="resume-card">
+            <h2>Core Competencies</h2>
+            <div class="skills">
+              <span class="skill">Enterprise Risk Management</span>
+              <span class="skill">Compliance Monitoring</span>
+              <span class="skill">Clery Act Compliance</span>
+              <span class="skill">Policy Development</span>
+              <span class="skill">Investigations Documentation</span>
+              <span class="skill">Case Management</span>
+              <span class="skill">Root Cause Analysis</span>
+              <span class="skill">Risk Registers</span>
+              <span class="skill">Executive Reporting</span>
+              <span class="skill">Data Analysis</span>
+              <span class="skill">Dashboards & Reporting</span>
+              <span class="skill">Stakeholder Training</span>
+              <span class="skill">Internal Controls</span>
+              <span class="skill">Cross-Functional Collaboration</span>
+            </div>
+          </div>
+
+          <div class="resume-card">
+            <h2>Credentials</h2>
+            <p><strong>Master of Jurisprudence</strong><br>Loyola University Chicago School of Law</p>
+            <p><strong>Bachelor of Fine Arts with Honors</strong><br>School of Visual Arts</p>
+            <p><strong>Certified Compliance and Ethics Professional (CCEP)</strong></p>
+            <p><strong>NACCOP</strong><br>Member</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Professional Experience</h2>
+        <div class="timeline">
+
+          <div class="job">
+            <h3>Risk Management Associate</h3>
+            <div class="meta">Pratt Institute · Brooklyn, NY · September 2024 – October 2025</div>
+            <ul>
+              <li>Supported enterprise risk management processes, including development and maintenance of an institutional risk register tracking 50+ operational risks.</li>
+              <li>Coordinated Clery Act compliance reporting and campus safety data collection, supporting 100% on-time federally required reporting.</li>
+              <li>Prepared risk summaries, compliance reports, and supporting documentation for institutional leadership and governance review.</li>
+              <li>Developed and refined compliance procedures that improved reporting consistency and reduced process gaps.</li>
+              <li>Delivered training and support for Campus Security Authorities to strengthen reporting awareness and compliance practices.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Advancement Manager</h3>
+            <div class="meta">Maryknoll Association of the Faithful · Ossining, NY · March 2024 – August 2024</div>
+            <ul>
+              <li>Managed compliance, reporting, and operational coordination for development and donor relations functions within a national nonprofit environment.</li>
+              <li>Supervised staff, supported process improvement, and aligned departmental activities with organizational policy and governance expectations.</li>
+              <li>Produced reports and analysis for senior leadership to support operational decision-making and visibility into performance.</li>
+              <li>Supported donor relations, stewardship workflows, and cross-functional coordination across development activities.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Data Analyst</h3>
+            <div class="meta">Metropolitan Museum of Art · New York, NY · January 2023 – November 2023</div>
+            <ul>
+              <li>Conducted compensation and workforce data analysis supporting HR compliance, pay equity review, and budget planning for a large institutional workforce.</li>
+              <li>Developed Excel and dashboard-based reporting tools used by HR and finance leadership for decision support.</li>
+              <li>Validated sensitive datasets across systems to improve reporting accuracy, audit readiness, and benchmarking quality.</li>
+              <li>Partnered with cross-functional stakeholders to translate data findings into practical operational recommendations.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Associate Data Analyst</h3>
+            <div class="meta">City of Chicago · Chicago, IL · March 2022 – October 2022</div>
+            <ul>
+              <li>Analyzed HR and compliance data to support compensation review, job benchmarking, and regulatory alignment across city departments.</li>
+              <li>Helped improve reporting workflows and documentation quality during departmental restructuring.</li>
+              <li>Supported audit-style reviews, policy alignment, and data-driven recommendations for internal stakeholders.</li>
+              <li>Contributed to dashboards and reporting used to strengthen oversight and decision-making.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Operations Coordinator & Employee Relations Assistant</h3>
+            <div class="meta">Art Institute of Chicago · Chicago, IL · 2015 – 2022</div>
+            <ul>
+              <li>Supported employee relations processes, workplace documentation, leave administration, accommodations coordination, and policy-aligned HR operations.</li>
+              <li>Managed advancement operations and donor data workflows, helping maintain data integrity, reporting consistency, and confidentiality standards.</li>
+              <li>Coordinated cross-departmental operational projects, documentation, and audit-support activities across institutional functions.</li>
+              <li>Supervised support staff and student workers while improving reporting practices and administrative workflows.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid">
+          <div class="edu-card">
+            <h2>Education</h2>
+            <p><strong>Master of Jurisprudence</strong><br>Loyola University Chicago School of Law · 2021</p>
+            <p><strong>Bachelor of Fine Arts with Honors</strong><br>School of Visual Arts · 2009</p>
+          </div>
+
+          <div class="edu-card">
+            <h2>Certifications & Affiliations</h2>
+            <p><strong>Certified Compliance and Ethics Professional (CCEP)</strong></p>
+            <p><strong>National Association of Clery Compliance Officers & Professionals</strong> · Member</p>
+          </div>
+
+          <div class="edu-card">
+            <h2>Continuing Education</h2>
+            <p>Machine Learning with Python (MITx, in progress)</p>
+            <p>Governance, Risk & Controls (IIA)</p>
+            <p>Internal Control Frameworks, Auditing (IIA)</p>
+            <p>Python for Everybody Specialization</p>
+            <p>Clery Compliance Foundations</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="resume-card">
+          <h2>Volunteer Leadership</h2>
+          <p><strong>Co-Vice President, External Affairs</strong> · PTA, P.S. 77 Lower Lab School for Gifted Education · 2024–Present</p>
+          <p><strong>Co-Vice President, Insurance</strong> · PTA, P.S. 290 Manhattan New School · 2023–2024</p>
+          <p><strong>Facilitator</strong> · Marwen Foundation Art & Leadership Workshops · 2017–2019</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2026 Amanda Paccha</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const PASSWORD = "access2026";
+
+    function login() {
+      const input = document.getElementById("password").value;
+
+      if (input === PASSWORD) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("site").style.display = "block";
+      } else {
+        document.getElementById("error").innerText = "Incorrect passcode";
+      }
+    }
+  </script>
+</body>
+</html>
