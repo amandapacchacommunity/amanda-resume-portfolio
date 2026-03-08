@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Amanda Paccha | Risk, Compliance & Governance</title>
+<title>Amanda Paccha | Portfolio</title>
+
+<meta name="referrer" content="no-referrer">
 
 <style>
 
 body{
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
-background:#f5f6f8;
+background:#f4f6f9;
 color:#222;
-line-height:1.6;
 }
 
 .container{
 width:90%;
-max-width:1050px;
+max-width:1000px;
 margin:auto;
 }
 
@@ -35,13 +36,8 @@ align-items:center;
 padding:18px 0;
 }
 
-.brand{
-font-weight:700;
-font-size:18px;
-}
-
 nav a{
-margin-left:20px;
+margin-left:18px;
 text-decoration:none;
 color:#555;
 font-weight:600;
@@ -51,43 +47,21 @@ nav a:hover{
 color:#3347d6;
 }
 
-.hero{
-padding:70px 0 40px 0;
-}
-
-.hero h1{
-font-size:42px;
-margin-bottom:10px;
-}
-
-.hero p{
+.brand{
+font-weight:700;
 font-size:18px;
-max-width:720px;
-color:#555;
 }
 
-.button{
-display:inline-block;
-margin-top:25px;
-padding:12px 18px;
-background:#3347d6;
-color:white;
-border-radius:6px;
-text-decoration:none;
-font-weight:600;
+.hero{
+padding:80px 0;
 }
 
-.button:hover{
-background:#2a3dc0;
+h1{
+font-size:42px;
 }
 
 .section{
 padding:60px 0;
-}
-
-.section h2{
-margin-bottom:15px;
-font-size:28px;
 }
 
 .grid{
@@ -100,64 +74,93 @@ gap:20px;
 background:white;
 padding:24px;
 border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,0.06);
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
 
-.card h3{
-margin-top:0;
-}
-
-.skills{
+.login-screen{
+height:100vh;
 display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-top:15px;
+align-items:center;
+justify-content:center;
+background:#f4f6f9;
 }
 
-.skill{
-background:#eef1ff;
-padding:6px 10px;
-border-radius:6px;
-font-size:14px;
-font-weight:600;
-}
-
-.timeline{
-margin-top:30px;
-}
-
-.job{
+.login-box{
 background:white;
-padding:25px;
-margin-bottom:20px;
+padding:40px;
 border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,0.06);
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+text-align:center;
+width:300px;
 }
 
-.job h3{
-margin-top:0;
+.login-box input{
+width:100%;
+padding:10px;
+margin-top:15px;
+border:1px solid #ccc;
+border-radius:6px;
 }
 
-.job span{
-color:#777;
+.login-box button{
+margin-top:15px;
+padding:10px;
+width:100%;
+border:none;
+background:#3347d6;
+color:white;
+font-weight:600;
+border-radius:6px;
+cursor:pointer;
+}
+
+.login-box button:hover{
+background:#2a3dc0;
+}
+
+#error{
+color:red;
 font-size:14px;
+margin-top:10px;
 }
 
 footer{
 padding:40px 0;
 text-align:center;
 color:#777;
-font-size:14px;
 }
 
 </style>
 
 </head>
 
+
 <body>
+
+<div id="login" class="login-screen">
+
+<div class="login-box">
+
+<h2>Portfolio Access</h2>
+
+<p>This portfolio is shared privately.</p>
+
+<input type="password" id="password" placeholder="Enter password">
+
+<button onclick="login()">Enter</button>
+
+<p id="error"></p>
+
+</div>
+
+</div>
+
+
+<div id="site" style="display:none">
 
 <header>
 <div class="container">
+
 <nav>
 
 <div class="brand">Amanda Paccha</div>
@@ -171,26 +174,24 @@ font-size:14px;
 </div>
 
 </nav>
+
 </div>
 </header>
 
 
+
 <section class="hero">
+
 <div class="container">
 
 <h1>Amanda Paccha</h1>
 
 <p>
-Risk and compliance professional with experience supporting enterprise risk management, regulatory compliance, investigations documentation, and analytics across higher education, nonprofit, and public sector institutions.
+Risk and compliance professional with experience supporting enterprise risk management, compliance reporting, investigations documentation, and analytics across higher education, nonprofit, and public sector institutions.
 </p>
-
-<p>
-My work focuses on strengthening compliance programs, supporting institutional governance, and translating operational data into clear reporting for leadership and stakeholders.
-</p>
-
-<a class="button" href="./resume/">View Resume</a>
 
 </div>
+
 </section>
 
 
@@ -206,109 +207,22 @@ My work focuses on strengthening compliance programs, supporting institutional g
 <div class="card">
 <h3>Risk & Compliance</h3>
 <p>
-Experience supporting enterprise risk management programs, compliance monitoring, and policy development aligned with regulatory and institutional governance frameworks.
+Enterprise risk registers, compliance monitoring, and policy development aligned with governance frameworks.
 </p>
 </div>
 
 <div class="card">
 <h3>Investigations Support</h3>
 <p>
-Work supporting compliance reviews, case documentation, incident reporting processes, and investigations coordination across HR, student affairs, and institutional leadership.
+Case documentation, misconduct reporting processes, and coordination with HR, legal, and institutional leadership.
 </p>
 </div>
 
 <div class="card">
-<h3>Data & Reporting</h3>
+<h3>Analytics & Reporting</h3>
 <p>
-Analysis and reporting of operational and compliance data to support executive decision-making and strengthen institutional transparency.
+Data analysis, dashboards, and executive reporting supporting compliance oversight and operational transparency.
 </p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section class="section">
-
-<div class="container">
-
-<h2>Core Competencies</h2>
-
-<div class="skills">
-
-<div class="skill">Enterprise Risk Management</div>
-<div class="skill">Compliance Monitoring</div>
-<div class="skill">Policy Development</div>
-<div class="skill">Clery Act Compliance</div>
-<div class="skill">Investigations Documentation</div>
-<div class="skill">Case Management Systems</div>
-<div class="skill">Root Cause Analysis</div>
-<div class="skill">Internal Controls</div>
-<div class="skill">Risk Reporting</div>
-<div class="skill">Data Analysis</div>
-<div class="skill">Dashboard Reporting</div>
-<div class="skill">Stakeholder Training</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section class="section">
-
-<div class="container">
-
-<h2>Selected Experience</h2>
-
-<div class="timeline">
-
-<div class="job">
-
-<h3>Risk Management Associate</h3>
-<span>Pratt Institute • Brooklyn, NY • 2024–2025</span>
-
-<ul>
-<li>Supported enterprise risk management processes including development of an institutional risk register tracking operational risks.</li>
-<li>Coordinated Clery Act compliance reporting and campus safety data collection processes.</li>
-<li>Prepared compliance reports and risk summaries for institutional leadership.</li>
-<li>Delivered training sessions for Campus Security Authorities on reporting obligations and compliance procedures.</li>
-</ul>
-
-</div>
-
-
-<div class="job">
-
-<h3>Advancement Manager</h3>
-<span>Maryknoll Association of the Faithful • 2024</span>
-
-<ul>
-<li>Managed compliance and operational reporting for development and donor relations programs.</li>
-<li>Supervised staff and coordinated departmental processes supporting nonprofit governance and reporting.</li>
-<li>Produced reports and data analysis to support leadership decision-making.</li>
-</ul>
-
-</div>
-
-
-<div class="job">
-
-<h3>Data Analyst</h3>
-<span>Metropolitan Museum of Art • 2023</span>
-
-<ul>
-<li>Conducted compensation and workforce data analysis supporting HR compliance and budgeting decisions.</li>
-<li>Developed reporting tools and dashboards used by HR and finance leadership.</li>
-<li>Validated large datasets and supported institutional benchmarking initiatives.</li>
-</ul>
-
 </div>
 
 </div>
@@ -323,14 +237,39 @@ Analysis and reporting of operational and compliance data to support executive d
 
 <div class="container">
 
-<p>
-© 2026 Amanda Paccha
-</p>
+<p>© 2026 Amanda Paccha</p>
 
 </div>
 
 </footer>
 
+</div>
+
+
+
+<script>
+
+const PASSWORD = "portfolio2026";
+
+function login(){
+
+let input = document.getElementById("password").value;
+
+if(input === PASSWORD){
+
+document.getElementById("login").style.display = "none";
+document.getElementById("site").style.display = "block";
+
+}else{
+
+document.getElementById("error").innerText = "Incorrect password";
+
+}
+
+}
+
+</script>
 
 </body>
+
 </html>
