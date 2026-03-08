@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership | Amanda Paccha</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="referrer" content="no-referrer" />
+
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:0;
+      background:#f4f6f9;
+      color:#222;
+      line-height:1.6;
+    }
+
+    .container{
+      width:90%;
+      max-width:1050px;
+      margin:auto;
+    }
+
+    header{
+      background:#fff;
+      border-bottom:1px solid #e2e2e2;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      font-weight:700;
+      font-size:18px;
+    }
+
+    nav a{
+      margin-left:18px;
+      text-decoration:none;
+      color:#555;
+      font-weight:600;
+    }
+
+    nav a:hover{
+      color:#3347d6;
+    }
+
+    .section{
+      padding:42px 0;
+    }
+
+    .hero{
+      padding:56px 0 24px 0;
+    }
+
+    h1{
+      font-size:40px;
+      margin:0 0 10px 0;
+    }
+
+    h2{
+      font-size:26px;
+      margin:0 0 16px 0;
+    }
+
+    h3{
+      margin:0 0 8px 0;
+      font-size:20px;
+    }
+
+    p{
+      margin:0 0 12px 0;
+    }
+
+    .muted{
+      color:#666;
+    }
+
+    .card,
+    .job,
+    .focus-box{
+      background:#fff;
+      padding:26px;
+      border-radius:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .timeline{
+      display:grid;
+      gap:18px;
+    }
+
+    .meta{
+      color:#666;
+      font-size:14px;
+      margin-bottom:14px;
+      font-weight:600;
+    }
+
+    .job ul,
+    .focus-box ul{
+      margin:10px 0 0 20px;
+      padding:0;
+    }
+
+    .job li,
+    .focus-box li{
+      margin-bottom:8px;
+    }
+
+    .login-screen{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#f4f6f9;
+      padding:20px;
+    }
+
+    .login-box{
+      background:#fff;
+      padding:40px;
+      border-radius:10px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      text-align:center;
+      width:320px;
+    }
+
+    .login-box input{
+      width:100%;
+      padding:10px;
+      margin-top:15px;
+      border:1px solid #ccc;
+      border-radius:6px;
+      box-sizing:border-box;
+    }
+
+    .login-box button{
+      margin-top:15px;
+      padding:10px;
+      width:100%;
+      border:none;
+      background:#3347d6;
+      color:white;
+      font-weight:600;
+      border-radius:6px;
+      cursor:pointer;
+    }
+
+    .login-box button:hover{
+      background:#2a3dc0;
+    }
+
+    .login-box a{
+      color:#3347d6;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    #error{
+      color:#c62828;
+      font-size:14px;
+      margin-top:10px;
+    }
+
+    footer{
+      padding:40px 0;
+      text-align:center;
+      color:#777;
+      font-size:14px;
+    }
+
+    @media (max-width: 800px){
+      nav a{
+        margin-left:0;
+        margin-right:14px;
+      }
+
+      h1{
+        font-size:34px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="login" class="login-screen">
+    <div class="login-box">
+      <h2>Private Portfolio Access</h2>
+      <p>This portfolio is shared privately.</p>
+      <p>To request the passcode please email:</p>
+      <p><a href="mailto:alpermnyc@gmail.com">alpermnyc@gmail.com</a></p>
+      <input type="password" id="password" placeholder="Enter passcode" />
+      <button onclick="login()">Access Portfolio</button>
+      <p id="error"></p>
+    </div>
+  </div>
+
+  <div id="site" style="display:none;">
+    <header>
+      <div class="container">
+        <nav>
+          <div class="brand">Amanda Paccha</div>
+          <div>
+            <a href="../">Home</a>
+            <a href="../about/">About</a>
+            <a href="../resume/">Resume</a>
+            <a href="../investigations/">Investigations</a>
+            <a href="../analytics/">Analytics</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="card">
+          <h1>Leadership</h1>
+          <p class="muted">
+            My leadership experience includes staff supervision, training, cross-functional coordination,
+            volunteer governance, and operational support across higher education, nonprofit, public,
+            and cultural institutions.
+          </p>
+          <p class="muted">
+            I have led through process improvement, clear communication, accountability, and support for
+            teams working across compliance, HR, development, and administrative functions.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Leadership Areas</h2>
+        <div class="grid">
+          <div class="focus-box">
+            <h3>Team Supervision</h3>
+            <ul>
+              <li>Experience supervising staff, student workers, office assistants, and volunteers.</li>
+              <li>Supported onboarding, training, workflow delegation, and performance feedback.</li>
+              <li>Helped maintain consistency, accountability, and service quality across teams.</li>
+            </ul>
+          </div>
+
+          <div class="focus-box">
+            <h3>Training & Development</h3>
+            <ul>
+              <li>Delivered training on compliance procedures, reporting obligations, and operational processes.</li>
+              <li>Supported staff development through coaching, documentation, and procedural guidance.</li>
+              <li>Created clear process expectations for cross-functional stakeholders.</li>
+            </ul>
+          </div>
+
+          <div class="focus-box">
+            <h3>Governance & Collaboration</h3>
+            <ul>
+              <li>Worked with leadership, HR, student affairs, finance, and operations on shared institutional goals.</li>
+              <li>Supported reporting and coordination across departments with different priorities and obligations.</li>
+              <li>Contributed to a culture of transparency, consistency, and informed decision-making.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Relevant Experience</h2>
+        <div class="timeline">
+
+          <div class="job">
+            <h3>Advancement Manager</h3>
+            <div class="meta">Maryknoll Association of the Faithful · Ossining, NY · March 2024 – August 2024</div>
+            <ul>
+              <li>Supervised staff and coordinated departmental operations in a nonprofit environment with significant reporting and stewardship responsibilities.</li>
+              <li>Supported workflow management, performance guidance, and process improvement across development functions.</li>
+              <li>Prepared reports and updates for senior leadership to support visibility into operations and priorities.</li>
+              <li>Worked across teams to align day-to-day execution with broader organizational goals.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Risk Management Associate</h3>
+            <div class="meta">Pratt Institute · Brooklyn, NY · September 2024 – October 2025</div>
+            <ul>
+              <li>Delivered training and support for Campus Security Authorities on compliance obligations and reporting expectations.</li>
+              <li>Worked across institutional departments to coordinate compliance-related processes and strengthen consistency.</li>
+              <li>Supported leadership reporting through organized communication and documentation.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Operations Coordinator & Employee Relations Assistant</h3>
+            <div class="meta">Art Institute of Chicago · Chicago, IL · 2015 – 2022</div>
+            <ul>
+              <li>Supervised support staff, office assistants, and student workers while coordinating operational priorities across functions.</li>
+              <li>Supported training, scheduling, workflow delegation, and day-to-day administrative leadership.</li>
+              <li>Helped improve documentation and reporting processes that supported HR, advancement, and institutional operations.</li>
+              <li>Partnered with cross-functional stakeholders to keep projects and service responsibilities moving efficiently.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Volunteer Leadership</h3>
+            <div class="meta">School Community Organizations · 2023 – Present</div>
+            <ul>
+              <li>Served in PTA leadership roles focused on external affairs and insurance coordination.</li>
+              <li>Supported community communication, parent engagement, and school-related operational planning.</li>
+              <li>Contributed to volunteer-led governance and collaboration in educational settings.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h2>Leadership Strengths</h2>
+          <div class="grid">
+            <div>
+              <p><strong>Clear communication</strong></p>
+              <p class="muted">Able to explain process, expectations, and reporting responsibilities across varied audiences.</p>
+            </div>
+            <div>
+              <p><strong>Operational follow-through</strong></p>
+              <p class="muted">Focus on documentation, consistency, and keeping work moving from issue to resolution.</p>
+            </div>
+            <div>
+              <p><strong>Collaborative management</strong></p>
+              <p class="muted">Works effectively with cross-functional teams and stakeholders in complex institutions.</p>
+            </div>
+            <div>
+              <p><strong>Training mindset</strong></p>
+              <p class="muted">Comfortable guiding others through policy, process, and practical responsibilities.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2026 Amanda Paccha</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const PASSWORD = "access2026";
+
+    function login() {
+      const input = document.getElementById("password").value;
+
+      if (input === PASSWORD) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("site").style.display = "block";
+      } else {
+        document.getElementById("error").innerText = "Incorrect passcode";
+      }
+    }
+  </script>
+</body>
+</html>
