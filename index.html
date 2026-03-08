@@ -1,38 +1,579 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Amanda Paccha</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amanda Paccha | Risk, Compliance & Governance</title>
+  <meta
+    name="description"
+    content="Amanda Paccha - Enterprise Risk, Compliance, Governance, Higher Education Operations, and Investigations portfolio."
+  />
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --text: #1f1f1f;
+      --muted: #5f6368;
+      --accent: #283593;
+      --accent-light: #e8eaf6;
+      --card: #ffffff;
+      --border: #d9dce3;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 5rem 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 4vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 60ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.2rem;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.95;
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--accent);
+      border-color: var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: #f0f2f8;
+      text-decoration: none;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h2 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      color: var(--muted);
+    }
+
+    .hero-card ul {
+      list-style: none;
+    }
+
+    .hero-card li {
+      padding: 0.65rem 0;
+      border-bottom: 1px solid #eceff3;
+      font-weight: 600;
+    }
+
+    .hero-card li:last-child {
+      border-bottom: none;
+    }
+
+    section {
+      padding: 3rem 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 70ch;
+      margin-bottom: 2rem;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .metric {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .metric h3 {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .metric p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      flex-grow: 1;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .skills-block {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .skills-block h3 {
+      margin-bottom: 0.9rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .tag {
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 0.5rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .timeline-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-meta {
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-item ul {
+      padding-left: 1.25rem;
+    }
+
+    .timeline-item li {
+      margin-bottom: 0.5rem;
+    }
+
+    .cta {
+      text-align: center;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 2.5rem 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .metrics,
+      .cards,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="./">Amanda Paccha</a>
+      <nav class="nav-links">
+        <a href="./resume/">Resume</a>
+        <a href="./investigations/">Investigations</a>
+        <a href="./higher-ed/">Higher Education</a>
+        <a href="./analytics/">Analytics</a>
+        <a href="./leadership/">Leadership</a>
+      </nav>
+    </div>
+  </header>
 
-<h1>Amanda Paccha</h1>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Enterprise Risk • Compliance • Governance</span>
+          <h1>Amanda Paccha</h1>
+          <p>
+            Certified compliance and ethics professional with experience across
+            enterprise risk management, Clery Act compliance, investigations support,
+            higher education operations, HR analytics, nonprofit governance, and
+            executive reporting.
+          </p>
+          <p>
+            I build risk frameworks, strengthen compliance programs, translate
+            complex data into decision-ready reporting, and support institutions in
+            aligning policy, operations, and accountability.
+          </p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="./resume/">View Resume</a>
+            <a class="btn btn-secondary" href="./investigations/">Explore Investigations</a>
+          </div>
+        </div>
 
-<p>
-Enterprise Risk | Compliance | Governance | Higher Education Operations
-</p>
+        <aside class="hero-card">
+          <h2>Highlights</h2>
+          <ul>
+            <li>Reduced institutional risk exposure by 20%</li>
+            <li>Directed 100% on-time Clery reporting</li>
+            <li>Tracked and mitigated 50+ institutional risks</li>
+            <li>Trained and supported 25+ Campus Security Authorities</li>
+            <li>Improved multi-source reporting efficiency by 20%</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-<p>
-Certified Compliance & Ethics Professional (CCEP) with a Master of Jurisprudence in Corporate Compliance & Enterprise Risk Management.
-</p>
+    <section>
+      <div class="container">
+        <h2 class="section-title">Selected Impact</h2>
+        <p class="section-subtitle">
+          A cross-sector background in higher education, nonprofit operations,
+          public service, employee relations, analytics, and governance.
+        </p>
 
-<p>
-Enterprise Risk professional focused on strengthening institutional governance, risk architecture, and executive reporting within mission-driven organizations.
-</p>
+        <div class="metrics">
+          <div class="metric">
+            <h3>50+</h3>
+            <p>Institutional risks tracked and assessed</p>
+          </div>
+          <div class="metric">
+            <h3>20%</h3>
+            <p>Reduction in potential risk exposure</p>
+          </div>
+          <div class="metric">
+            <h3>30%</h3>
+            <p>Reduction in non-compliance issues</p>
+          </div>
+          <div class="metric">
+            <h3>10,000+</h3>
+            <p>Stakeholders served through required reporting</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<h2>Portfolio Sections</h2>
+    <section>
+      <div class="container">
+        <h2 class="section-title">Portfolio Paths</h2>
+        <p class="section-subtitle">
+          This site organizes my experience into focused areas so visitors can
+          quickly understand my work through the lens most relevant to them.
+        </p>
 
-<p>
-<a href="./higher-ed/">Explore Higher Education</a>
-</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Investigations & Compliance</h3>
+            <p>
+              Experience supporting misconduct reviews, Clery compliance,
+              case documentation, policy enforcement, root cause analysis,
+              and executive-level reporting.
+            </p>
+            <a href="./investigations/">View Investigations Page →</a>
+          </article>
 
-<p>
-<a href="./investigations/">View Investigations</a>
-</p>
+          <article class="card">
+            <h3>Higher Education & Governance</h3>
+            <p>
+              Work spanning campus safety, student services risk, policy
+              development, CSA training, institutional reporting, and
+              cross-functional governance.
+            </p>
+            <a href="./higher-ed/">View Higher Education Page →</a>
+          </article>
 
-<p>
-<a href="./analytics/">Analytics & Risk Dashboards</a>
-</p>
+          <article class="card">
+            <h3>Analytics & Risk Reporting</h3>
+            <p>
+              Dashboarding, trend analysis, compensation analytics, risk
+              reporting, large dataset validation, and decision support for
+              senior leadership.
+            </p>
+            <a href="./analytics/">View Analytics Page →</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section>
+      <div class="container">
+        <h2 class="section-title">Core Competencies</h2>
+        <p class="section-subtitle">
+          A blend of compliance, investigations, analytics, training, and
+          operational leadership across mission-driven institutions.
+        </p>
+
+        <div class="skills-grid">
+          <div class="skills-block">
+            <h3>Risk, Audit & Compliance</h3>
+            <div class="tag-list">
+              <span class="tag">Enterprise Risk Management</span>
+              <span class="tag">Risk Registers</span>
+              <span class="tag">Control Testing</span>
+              <span class="tag">Compliance Monitoring</span>
+              <span class="tag">Gap Assessments</span>
+              <span class="tag">Remediation Planning</span>
+              <span class="tag">Policy Development</span>
+              <span class="tag">Clery Act</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <h3>Investigations & Reporting</h3>
+            <div class="tag-list">
+              <span class="tag">Case Management</span>
+              <span class="tag">Misconduct Documentation</span>
+              <span class="tag">Root Cause Analysis</span>
+              <span class="tag">Trend Reporting</span>
+              <span class="tag">Executive Briefings</span>
+              <span class="tag">Stakeholder Training</span>
+              <span class="tag">Code of Conduct Support</span>
+              <span class="tag">Data Dashboards</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Selected Experience</h2>
+        <p class="section-subtitle">
+          Highlights from roles in higher education, nonprofit leadership,
+          analytics, public sector administration, and employee relations.
+        </p>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3>Risk Management Associate</h3>
+            <div class="timeline-meta">Pratt Institute • Brooklyn, NY • September 2024 – October 2025</div>
+            <ul>
+              <li>Built and maintained an institutional risk register tracking 50+ risks and reducing exposure by 20%.</li>
+              <li>Directed Clery Act compliance and federally mandated reporting for 10,000+ stakeholders with 100% on-time delivery.</li>
+              <li>Developed policies and workflows that reduced non-compliance issues by 30%.</li>
+              <li>Improved reporting efficiency by 20% through multi-department data consolidation and dashboarding.</li>
+              <li>Recruited, trained, and supported 25+ Campus Security Authorities.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <h3>Advancement Manager</h3>
+            <div class="timeline-meta">Maryknoll Association of the Faithful • Ossining, NY • March 2024 – August 2024</div>
+            <ul>
+              <li>Directed compliance, operations, and reporting for a $5M nonprofit environment.</li>
+              <li>Supervised staff and strengthened accountability through policy alignment and training.</li>
+              <li>Managed donor relations and reporting processes that improved retention and operational visibility.</li>
+              <li>Presented data-driven reports and recommendations to senior leadership.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <h3>Data Analyst</h3>
+            <div class="timeline-meta">Metropolitan Museum of Art • New York, NY • January 2023 – November 2023</div>
+            <ul>
+              <li>Delivered compensation and compliance analysis supporting 1,700 employees and a $250M budget.</li>
+              <li>Built dashboards and models for pay equity, market benchmarking, and budget forecasting.</li>
+              <li>Validated large, sensitive datasets to improve reporting accuracy and audit readiness.</li>
+              <li>Partnered with HR, Finance, and leadership to improve data-driven decision-making.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="button-row" style="margin-top: 1.5rem;">
+          <a class="btn btn-secondary" href="./resume/">See Full Experience</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta">
+          <h2 class="section-title">Education, Certifications & Leadership</h2>
+          <p class="section-subtitle" style="margin: 0 auto 1.5rem;">
+            Master of Jurisprudence from Loyola University Chicago, CCEP training,
+            Clery and governance coursework, and volunteer leadership in school communities.
+          </p>
+          <div class="button-row" style="justify-content: center;">
+            <a class="btn btn-primary" href="./resume/">Open Resume</a>
+            <a class="btn btn-secondary" href="./leadership/">View Leadership</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Amanda Paccha • GitHub Pages Portfolio</p>
+    </div>
+  </footer>
 </body>
 </html>
