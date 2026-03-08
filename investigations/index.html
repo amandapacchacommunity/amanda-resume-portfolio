@@ -1,18 +1,374 @@
-<h1>Amanda Paccha</h1>
-<p>Enterprise Risk | Compliance | Governance | Higher Education Operations</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investigations | Amanda Paccha</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="referrer" content="no-referrer" />
 
-<p>
-  Certified Compliance &amp; Ethics Professional (CCEP) with a Master of Jurisprudence in
-  Corporate Compliance &amp; Enterprise Risk Management.
-</p>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:0;
+      background:#f4f6f9;
+      color:#222;
+      line-height:1.6;
+    }
 
-<p>
-  Enterprise Risk professional focused on strengthening institutional governance, risk
-  architecture, and executive reporting within mission-driven organizations.
-</p>
+    .container{
+      width:90%;
+      max-width:1050px;
+      margin:auto;
+    }
 
-<p>
-  <a href="./higher-ed/">Explore Higher Education</a><br />
-  <a href="./investigations/">View Investigations</a><br />
-  <a href="./analytics/">Analytics &amp; Risk Dashboards</a>
-</p>
+    header{
+      background:#fff;
+      border-bottom:1px solid #e2e2e2;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      font-weight:700;
+      font-size:18px;
+    }
+
+    nav a{
+      margin-left:18px;
+      text-decoration:none;
+      color:#555;
+      font-weight:600;
+    }
+
+    nav a:hover{
+      color:#3347d6;
+    }
+
+    .section{
+      padding:42px 0;
+    }
+
+    .hero{
+      padding:56px 0 24px 0;
+    }
+
+    h1{
+      font-size:40px;
+      margin:0 0 10px 0;
+    }
+
+    h2{
+      font-size:26px;
+      margin:0 0 16px 0;
+    }
+
+    h3{
+      margin:0 0 8px 0;
+      font-size:20px;
+    }
+
+    p{
+      margin:0 0 12px 0;
+    }
+
+    .muted{
+      color:#666;
+    }
+
+    .card,
+    .job,
+    .focus-box{
+      background:#fff;
+      padding:26px;
+      border-radius:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .timeline{
+      display:grid;
+      gap:18px;
+    }
+
+    .job .meta{
+      color:#666;
+      font-size:14px;
+      margin-bottom:14px;
+      font-weight:600;
+    }
+
+    .job ul,
+    .focus-box ul{
+      margin:10px 0 0 20px;
+      padding:0;
+    }
+
+    .job li,
+    .focus-box li{
+      margin-bottom:8px;
+    }
+
+    .login-screen{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#f4f6f9;
+      padding:20px;
+    }
+
+    .login-box{
+      background:#fff;
+      padding:40px;
+      border-radius:10px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      text-align:center;
+      width:320px;
+    }
+
+    .login-box input{
+      width:100%;
+      padding:10px;
+      margin-top:15px;
+      border:1px solid #ccc;
+      border-radius:6px;
+      box-sizing:border-box;
+    }
+
+    .login-box button{
+      margin-top:15px;
+      padding:10px;
+      width:100%;
+      border:none;
+      background:#3347d6;
+      color:white;
+      font-weight:600;
+      border-radius:6px;
+      cursor:pointer;
+    }
+
+    .login-box button:hover{
+      background:#2a3dc0;
+    }
+
+    .login-box a{
+      color:#3347d6;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    #error{
+      color:#c62828;
+      font-size:14px;
+      margin-top:10px;
+    }
+
+    footer{
+      padding:40px 0;
+      text-align:center;
+      color:#777;
+      font-size:14px;
+    }
+
+    @media (max-width: 800px){
+      nav a{
+        margin-left:0;
+        margin-right:14px;
+      }
+
+      h1{
+        font-size:34px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="login" class="login-screen">
+    <div class="login-box">
+      <h2>Private Portfolio Access</h2>
+      <p>This portfolio is shared privately.</p>
+      <p>To request the passcode please email:</p>
+      <p><a href="mailto:alpermnyc@gmail.com">alpermnyc@gmail.com</a></p>
+      <input type="password" id="password" placeholder="Enter passcode" />
+      <button onclick="login()">Access Portfolio</button>
+      <p id="error"></p>
+    </div>
+  </div>
+
+  <div id="site" style="display:none;">
+    <header>
+      <div class="container">
+        <nav>
+          <div class="brand">Amanda Paccha</div>
+          <div>
+            <a href="../">Home</a>
+            <a href="../about/">About</a>
+            <a href="../resume/">Resume</a>
+            <a href="../analytics/">Analytics</a>
+            <a href="../leadership/">Leadership</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="card">
+          <h1>Investigations</h1>
+          <p class="muted">
+            My investigations-related work has centered on compliance reviews, case documentation,
+            reporting processes, policy interpretation, and cross-functional coordination with HR,
+            student affairs, public safety, and leadership.
+          </p>
+          <p class="muted">
+            While many of my roles were broader than a dedicated investigator title, they involved
+            the same core disciplines: gathering facts, documenting issues carefully, identifying
+            patterns, supporting fair process, and translating findings into practical risk and
+            compliance action.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Areas of Focus</h2>
+        <div class="grid">
+          <div class="focus-box">
+            <h3>Case Documentation</h3>
+            <ul>
+              <li>Prepared and maintained documentation supporting compliance and employee relations matters.</li>
+              <li>Tracked issue status, follow-up actions, and reporting outputs across institutional processes.</li>
+              <li>Supported careful handling of sensitive information and confidential records.</li>
+            </ul>
+          </div>
+
+          <div class="focus-box">
+            <h3>Policy & Compliance Review</h3>
+            <ul>
+              <li>Applied institutional policy and regulatory requirements to reporting and review workflows.</li>
+              <li>Supported Clery, conduct, HR, and operational compliance processes.</li>
+              <li>Helped identify gaps in process consistency and documentation quality.</li>
+            </ul>
+          </div>
+
+          <div class="focus-box">
+            <h3>Trend Analysis & Reporting</h3>
+            <ul>
+              <li>Analyzed incident, compliance, and workforce data for patterns and reporting needs.</li>
+              <li>Prepared summaries for leadership to support risk-based decision-making.</li>
+              <li>Contributed to dashboards and reporting tools that improved visibility into recurring issues.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Relevant Experience</h2>
+        <div class="timeline">
+
+          <div class="job">
+            <h3>Risk Management Associate</h3>
+            <div class="meta">Pratt Institute · Brooklyn, NY · September 2024 – October 2025</div>
+            <ul>
+              <li>Supported compliance reviews and reporting processes related to Clery Act obligations, campus safety reporting, and institutional risk management.</li>
+              <li>Coordinated with Student Affairs, Public Safety, and other stakeholders to gather, validate, and consolidate incident-related information.</li>
+              <li>Prepared risk and compliance summaries for institutional leadership, helping translate findings into actionable reporting.</li>
+              <li>Supported policy development and training processes that improved reporting consistency and institutional accountability.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Operations Coordinator & Employee Relations Assistant</h3>
+            <div class="meta">Art Institute of Chicago · Chicago, IL · 2015 – 2022</div>
+            <ul>
+              <li>Supported employee relations matters involving workplace documentation, conflict issues, and policy-aligned HR coordination.</li>
+              <li>Assisted with documentation and process support for staff concerns, disciplinary matters, and compliance-related follow-up.</li>
+              <li>Worked across departments to strengthen reporting consistency, documentation practices, and operational accountability.</li>
+              <li>Maintained confidentiality while supporting institutional processes related to conduct, leave, accommodations, and HR operations.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Associate Data Analyst</h3>
+            <div class="meta">City of Chicago · Chicago, IL · March 2022 – October 2022</div>
+            <ul>
+              <li>Analyzed HR and compliance data to identify trends, inconsistencies, and areas requiring closer review.</li>
+              <li>Supported reporting and documentation that informed compliance oversight and policy alignment.</li>
+              <li>Contributed to structured review processes by validating records, reconciling data, and improving reporting workflows.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Data Analyst</h3>
+            <div class="meta">Metropolitan Museum of Art · New York, NY · January 2023 – November 2023</div>
+            <ul>
+              <li>Validated large and sensitive datasets used in compensation, workforce, and compliance-related reporting.</li>
+              <li>Produced analytical reporting that helped leadership spot trends, strengthen consistency, and support audit readiness.</li>
+              <li>Partnered with HR and other stakeholders to improve data integrity in sensitive institutional processes.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h2>Relevant Strengths</h2>
+          <div class="grid">
+            <div>
+              <p><strong>Fact-based documentation</strong></p>
+              <p class="muted">Clear, organized, and policy-aware documentation of sensitive matters.</p>
+            </div>
+            <div>
+              <p><strong>Cross-functional coordination</strong></p>
+              <p class="muted">Experience working with HR, operations, student affairs, public safety, and leadership.</p>
+            </div>
+            <div>
+              <p><strong>Confidentiality and judgment</strong></p>
+              <p class="muted">Careful handling of sensitive records, reporting obligations, and institutional issues.</p>
+            </div>
+            <div>
+              <p><strong>Pattern recognition</strong></p>
+              <p class="muted">Ability to connect case information, reporting trends, and process gaps into practical insight.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2026 Amanda Paccha</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const PASSWORD = "access2026";
+
+    function login() {
+      const input = document.getElementById("password").value;
+
+      if (input === PASSWORD) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("site").style.display = "block";
+      } else {
+        document.getElementById("error").innerText = "Incorrect passcode";
+      }
+    }
+  </script>
+</body>
+</html>
